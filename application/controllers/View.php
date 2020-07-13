@@ -9,7 +9,11 @@ class View extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('view');
+		
+		$this->load->model('Nhansu_model');
+		$dulieu = $this->nhansu_model->nhansu_show_model();
+		$dulieu = array('dulieucontroller'=>$dulieu);
+		$this->load->view('view',$dulieu);
 	}
 
 }
