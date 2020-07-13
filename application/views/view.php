@@ -17,8 +17,7 @@
             crossorigin="anonymous">         
     </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>jqueryupload/js/vendor/jquery.ui.widget.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>jqueryupload/js/jquery.fileupload.js"></script>
+
 
     
 </script>
@@ -36,7 +35,7 @@
           <div class="collapse navbar-collapse" id="collapsibleNavId">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                   <li class="nav-item ">
-                      <a class="nav-link" href="<?=base_url() ?>index.php/nhansu_controller">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#">Link</a>
@@ -68,8 +67,8 @@
                         <p class="card-text">So don hang  : <?php echo $value['sodonhang'] ?></p>
                         <p class="card-text"><small><a href="<?php echo $value['linkfb'] ?>" class="btn btn-primary">FaceBook <i class="fa fa-chevron-down" aria-hidden="true"></i></a></small></p>
                         <p class="card-text">
-                          <small><a href="<?= base_url()?>index.php/nhansu_controller/nhansu_edit_controller/<?php echo $value['id'] ?>" class="btn btn-warning">Edit <i class="fa fa-pencil"></i></a></small>
-                          <small><a href="<?= base_url()?>index.php/nhansu_controller/nhansu_delete_controller/<?php echo $value['id'] ?>" class="btn btn-danger">Delete <i class="fa fa-remove"></i></a></small>
+                          <small><a href="index.php/nhansu_controller/nhansu_edit_controller/<?php echo $value['id'] ?>" class="btn btn-warning">Edit <i class="fa fa-pencil"></i></a></small>
+                          <small><a href="index.php/nhansu_controller/nhansu_delete_controller/<?php echo $value['id'] ?>" class="btn btn-danger">Delete <i class="fa fa-remove"></i></a></small>
                         </p>
                     </div>
                   </div>
