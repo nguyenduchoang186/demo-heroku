@@ -12,6 +12,17 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-3">Demo heroku </h1>
+        <p class="lead">Deploy heroku web app</p>
+        <hr class="my-2">
+        <p>More info</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+        </p>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
