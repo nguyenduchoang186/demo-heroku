@@ -11,7 +11,7 @@ class View extends CI_Controller {
 	{
 		
 		$this->load->model('Nhansu_model');
-		$dulieu = $this->nhansu_model->nhansu_show_model();
+		$dulieu = $this->Nhansu_model->nhansu_show_model();
 		$dulieu = array('dulieucontroller'=>$dulieu);
 		$this->load->view('view',$dulieu);
 	}
