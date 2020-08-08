@@ -21,7 +21,7 @@ if($id){
         <div class="container" >
             <div class="row justify-content-md-center">
                 <div class="col-sm-6 " >
-                    <form class="border" style="margin-top: 200px; padding: 30px; background: #ffff; border-radius: 4px;" method="post" action="Test_controller/test_sess">
+                    <form class="border" style="margin-top: 200px; padding: 30px; background: #ffff; border-radius: 4px;" method="post" action="User_controller/test_sess">
                         <h3 align="center" style="margin-bottom: 20px; color: ">AD Setting </h3>
                         <div class="form-group">
                             <label for="Email">Email address</label>
@@ -38,7 +38,7 @@ if($id){
                             <h5>If you fogot your password, <a href="">click here</a> </h5> 
                         </div>
                         <div class="text">
-                            <h5>Register new account, <a href="<?php echo base_url() ?>Test_controller/register_form">click here</a> </h5> 
+                            <h5>Register new account, <a href="<?php echo base_url() ?>User_controller/register_form">click here</a> </h5> 
                         </div>
                     </form>
                 </div>

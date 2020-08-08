@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <div>
-            <form method="post" action="<?php echo base_url() ?>Test_controller/new_register">
+            <form method="post" action="<?php echo base_url() ?>User_controller/new_register">
                 <div class="form-group">
                     <div id="formdiv">
                         <div class="form-row" style="margin-right:0px;margin-left:0px;padding-top:24px;">

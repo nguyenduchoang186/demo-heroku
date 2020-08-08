@@ -15,7 +15,7 @@
           </button>
           <div class="dropdown-menu dropdown-menu-right">
             <button class="dropdown-item" type="button">Profile</button>
-            <button class="dropdown-item" type="button"><a href="<?php echo base_url() ?>Test_controller/logout">Logout</a></button>
+            <button class="dropdown-item" type="button"><a href="<?php echo base_url() ?>User_controller/logout">Logout</a></button>
           </div>
         </div>
       </div>
