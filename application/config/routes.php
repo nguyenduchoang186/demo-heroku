@@ -54,9 +54,9 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['campaign'] = 'User_controller/campaign';
-$route['admin'] = 'Admin_controller/account';
-$route['admin/account'] = 'Admin_controller/account';
-$route['admin/campaign'] = 'Admin_controller/campaign';
+$route['admin'] = 'Admin_Controller/account';
+$route['admin/account'] = 'Admin_Controller/account';
+$route['admin/campaign'] = 'Admin_Controller/campaign';
 
-$route['dac'] = 'Dac_controller/account';
-$route['dac/account'] = 'Dac_controller/account';
+$route['dac'] = 'Dac_Controller/account';
+$route['dac/account'] = 'Dac_Controller/account';

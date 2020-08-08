@@ -70,9 +70,6 @@ class User_controller extends CI_Controller {
 			$this->session->set_userdata('numofad', $data['0']['num_of_ad']);
 			$this->session->set_userdata('role', $data['0']['role']);
 
-			// $dataUser = $this->Login_database->read_user_infomation($sess_arr);
-			// $dataUser = array('userInfo' => $dataUser);
-			// $this->load->view('thanhcong', $dataUser);
 			if($data['0']['role']== 1){
 				redirect('admin/account');
 			}else if($data['0']['role']== 2){
