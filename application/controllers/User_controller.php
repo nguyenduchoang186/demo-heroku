@@ -5,7 +5,7 @@ class User_controller extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Login_model');
+		$this->load->model('Login_database');
 		$this->load->model('Manage_Account_Model');
 	}
 
