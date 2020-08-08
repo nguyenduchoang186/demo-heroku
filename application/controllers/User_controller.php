@@ -6,16 +6,46 @@ class User_controller extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Login_model');
+		$this->load->model('Manage_Account_Model');
 	}
 
 	public function index()
 	{
 		$this->load->view('login_form');
 	}
-
-	public function home()
+	public function register_form()
 	{
-		$this->load->view('home_page');
+		$this->load->view('register_form');
+	}
+
+	public function new_register()
+	{
+		$this->form_validation->set_rules('companyname', 'Company Name', 'trim|required');
+		$this->form_validation->set_rules('username', 'User name', 'trim|required');
+		$this->form_validation->set_rules('email', 'Email', 'trim|required');
+		$this->form_validation->set_rules('password', 'Password', 'required');
+		$this->form_validation->set_rules('confirmpassword', 'Confirm Password', 'required|matches[password]');
+
+		if ($this->form_validation->run() == false) {
+			$this->load->view('register_form');
+		} else {
+			$data = array(
+				'user_name' => $this->input->post('username'),
+				'mail' => $this->input->post('email'),
+				'company_name' => $this->input->post('companyname'),
+				'user_password' => $this->input->post('password'),
+				'status' => '2',
+				'role' => '3'
+			);
+			$result = $this->Login_database->registration_insert($data) ;
+			if ($result == TRUE) {
+				$data['message_display'] = 'Registration Successfully !';
+				redirect(base_url());
+			} else {
+				$data['message_display'] = 'Username already exist!';
+				$this->load->view('register_form', $data);
+			}
+		}
 	}
 
 	public function login()
@@ -24,9 +54,12 @@ class User_controller extends CI_Controller {
 			'username' => $this->input->post('username'),
 			'password' => $this->input->post('password')
 		);
-		$data = $this->Login_model->login($sess_arr);
+		$data = $this->Login_database->login($sess_arr);
 		if ($data) {
-			
+			if ($data['0']['status'] == '2') {
+				redirect(base_url());
+				// alert("Tai khoan chua duoc kich hoat");
+			}
 			$this->session->set_userdata('sid', $data['0']['id']);
 			$this->session->set_userdata('username', $data['0']['user_name']);
 			$this->session->set_userdata('password', $data['0']['user_password']);
@@ -37,7 +70,16 @@ class User_controller extends CI_Controller {
 			$this->session->set_userdata('numofad', $data['0']['num_of_ad']);
 			$this->session->set_userdata('role', $data['0']['role']);
 
-			redirect('home');
+			// $dataUser = $this->Login_database->read_user_infomation($sess_arr);
+			// $dataUser = array('userInfo' => $dataUser);
+			// $this->load->view('thanhcong', $dataUser);
+			if($data['0']['role']== 1){
+				redirect('admin/account');
+			}else if($data['0']['role']== 2){
+				redirect('dac');
+			}else if($data['0']['role']== 3){
+				redirect('advertiser');
+			}			
 		}
 		else {
 			redirect(base_url());
