@@ -126,7 +126,7 @@
                   <td><?php echo $value['end_date'] ?></td>
                   <td>
                     <small>
-                      <a class="btn" href="<?php echo base_url() ?>Admin_controller/active/<?php echo $value['id'] ?>" id="active">
+                      <a class="btn" href="<?php echo base_url() ?>Admin_Controller/active_campaign/<?php echo $value['id'] ?>" id="active">
                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"/></svg>
                      </a>
                    </small>
@@ -134,7 +134,7 @@
 
                    </small>
                    <small>
-                     <a class="btn" href="<?php echo base_url() ?>Admin_controller/delete/<?php echo $value['id'] ?>" id="delete"  onclick="deleteRow(this)" type="submit" >
+                     <a class="btn" href="<?php echo base_url() ?>Admin_Controller/delete_campaign/<?php echo $value['id'] ?>" id="delete"  onclick="deleteRow(this)" type="submit" >
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
                       </a>
